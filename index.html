@@ -13,21 +13,41 @@
 </head>
 
 <body>
-    <header>
-        <img id="hero-image" src="" alt="">
-        <h1>Score Keeper!</h1>
-    </header>
-    <main>
-        <h2><span id=score1Display></span> to <span id="score2Display"></span></h2>
-        <p>Use the buttons below to keep score</p>
-        <label for="playto">Playing to </label>
-        <input id="playto" type="number" min="1" placeholder="5" value="5">
-        <div class="button-field">
-            <button id="player1add" class="btn">+1 Player One</button>
-            <button id="player2add" class="btn">+1 Player Two</button>
-            <button id="reset" class="btn">Reset</button>
+    <section class="hero is-fullheight">
+        <div class="columns mt-6">
+            <div class="column is-half is-offset-one-quarter">
+                <div class="card has-text-centered">
+
+                    <div class="card-content">
+                        <div class="content is-large">
+                            <h1>Score Keeper!</h1>
+                            <h2><span id=score1Display>0</span> to <span id="score2Display">0</span></h2>
+                            <h2 id="winner"></h2>
+                            <p class="subtitle">Use the buttons below to keep score</p>
+                        </div>
+                        <div class="field has-addons has-addons-centered">
+                            <p class="control">
+                                <a class="button is-static is-large">Playing to</a>
+                            </p>
+                            <p class="control">
+                                <input id="playto" class="input is-large" max="50" min="1" placeholder="5" value="5"
+                                    required type="number">
+                            </p>
+                        </div>
+                    </div>
+
+                    <footer class="card-footer">
+                        <button id="player1add" class="card-footer-item button is-success is-large btn">+1 Player
+                            One</button>
+                        <button id="player2add" class="card-footer-item button is-link is-large btn">+1 Player
+                            Two</button>
+                        <button id="reset" class="card-footer-item button is-warning is-large btn">Reset</button>
+                    </footer>
+
+                </div>
+            </div>
         </div>
-    </main>
+    </section>
 
     <script src="src/app.js"></script>
 </body>
