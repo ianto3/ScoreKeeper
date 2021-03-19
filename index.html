@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
     <title>Score Keeper</title>
 </head>
 
@@ -14,16 +18,18 @@
         <h1>Score Keeper!</h1>
     </header>
     <main>
-        <h2><span id=score1></span> to <span id="score2"></span></h2>
+        <h2><span id=score1Display></span> to <span id="score2Display"></span></h2>
         <p>Use the buttons below to keep score</p>
-        <label for="">Playing to</label>
-        <input id="playto" type="number" min="1" placeholder="1">
+        <label for="playto">Playing to </label>
+        <input id="playto" type="number" min="1" placeholder="5" value="5">
         <div class="button-field">
-            <button id="player1" class="btn">+1 Player One</button>
-            <button id="player2" class="btn">+1 Player Two</button>
+            <button id="player1add" class="btn">+1 Player One</button>
+            <button id="player2add" class="btn">+1 Player Two</button>
             <button id="reset" class="btn">Reset</button>
         </div>
     </main>
+
+    <script src="src/app.js"></script>
 </body>
 
 </html>
